@@ -8,3 +8,6 @@ feb <- hpc[dates,]
 feb$Global_active_power <- as.numeric(as.character(feb$Global_active_power))
 hist(feb$Global_active_power, col = "orangered", main = "Global Active Power", 
     xlab = "Global Active Power (kilowatts)")
+
+dev.copy(png, file = "plot1.png", width=480,height=480,units="px")
+dev.off()
