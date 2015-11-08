@@ -9,3 +9,6 @@ x <- paste(as.character(feb$Date), feb$Time)
 feb$Time <- strptime(x, "%Y-%m-%d %H:%M:%S")
 feb$Global_active_power <- as.numeric(as.character(feb$Global_active_power))
 plot(feb$Time, feb$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
+
+dev.copy(png, file = "plot2.png", width=480,height=480,units="px")
+dev.off()
